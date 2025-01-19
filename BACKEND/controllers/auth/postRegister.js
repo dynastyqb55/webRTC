@@ -18,7 +18,15 @@ const postRegister = async (req, res) => {
         const user = User.create({userName: userName.toLowerCase(), email: email.toLowerCase(), password: hashedPassword});
 
         // JWT token
-        const token = "JWT-token";
+        const token = jwt.sign({
+                userName: user.userName,
+                email: user.email
+            }, 
+            process.env.JWT_SECRET, 
+            {
+                expiresIn: '100h'
+            }
+        );
         return res.status(201).json(
             {
                 message: 'User created successfully', 
