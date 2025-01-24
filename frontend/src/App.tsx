@@ -4,6 +4,7 @@ import { Room } from './shared/components/Room';
 import { Home } from './shared/components/Home';
 import NotFound from "./shared/components/404";
 import Login from "./pages/authPages/LoginPage";
+import SignUp from "./pages/authPages/SignupPage";
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path='login' element={<Login />}/>
-          <Route path='signup' element={<Room />}/>
+          <Route path='signup' element={<SignUp />}/>
           <Route path="*" element={<NotFound/>} />
         </Routes>
       </BrowserRouter>

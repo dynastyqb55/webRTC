@@ -1,6 +1,14 @@
+import AuthBox from "../../shared/components/AuthBox";
+import LoginPageHeader from "../../shared/components/LoginHeader";
+import LoginPageForm from "../../shared/components/LoginPageInputs";
+
+
 const Login = () => {
     return (
-        <section className="loginPage">Login Page</section>
+        <AuthBox> 
+            <LoginPageHeader/>
+            <LoginPageForm/>
+        </AuthBox>
 )}
 
 
