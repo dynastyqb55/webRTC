@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
-import { Room } from './components/Room';
-import { Home } from './components/Home';
-import NotFound from "./components/404";
+import { Room } from './shared/components/Room';
+import { Home } from './shared/components/Home';
+import NotFound from "./shared/components/404";
 import Login from "./pages/authPages/LoginPage";
 
 function App() {
