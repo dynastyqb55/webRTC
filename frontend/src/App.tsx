@@ -3,6 +3,7 @@ import './App.css'
 import { Room } from './components/Room';
 import { Home } from './components/Home';
 import NotFound from "./components/404";
+import Login from "./pages/authPages/LoginPage";
 
 function App() {
 
@@ -10,12 +11,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<h1>Home</h1>}>
-            <Route index element={<Home />}></Route>
-          </Route>
-          <Route path='room/:room_number' element={<Room />}></Route>
+          <Route path="/" element={<Home />}/>
+          <Route path='login' element={<Login />}/>
+          <Route path='signup' element={<Room />}/>
           <Route path="*" element={<NotFound/>} />
-          {/* <Route path="/about" element={<h1>About</h1>} /> */}
         </Routes>
       </BrowserRouter>
     </>
